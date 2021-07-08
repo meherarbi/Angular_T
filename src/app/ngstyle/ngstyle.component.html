@@ -1,0 +1,34 @@
+
+<div class="container">
+    <div class="row">
+        <p [ngStyle]="{
+            'background-color':bgcolor,
+            'color':color,
+            'font-size':size,
+            'font-family':police
+
+        }"> Meher Arbi  certifié Angular </p>
+    </div>
+    <div class="input-group mb-3">
+        <input [(ngModel)]="bgcolor" type="text" class="form-control" placeholder="saisir un couleur d'arrier "  >
+       
+      </div>
+    <div class="input-group mb-3">
+        <input [(ngModel)]="color" type="text" class="form-control" placeholder="saisir un couleur "  >
+       
+      </div>
+      <div class="input-group mb-3">
+        <input #sz  type="number" class="form-control" placeholder="saisir la taille du Texte " (change)="changesize(sz)" >
+      </div>
+      
+      <select [(ngModel)]="police" class="form-select" aria-label="Default select example">
+        <option selected>selectioner un police </option>
+        <option value="Arial">Arial</option>
+        <option value="Impact">Impact</option>
+        <option value="Phosphate">Phosphate</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Cambria">Cambria</option>
+        <option value="Kable">Kable</option>
+        
+      </select>
+</div>
