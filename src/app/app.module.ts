@@ -9,6 +9,8 @@ import { DetailComponent } from './detail/detail.component';
 import { ItemComponent } from './item/item.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { FormsModule } from '@angular/forms';
+import { DirectiveDirective } from './directive.directive';
+import { NoImagePipe } from './no-image.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     ListComponent,
     DetailComponent,
     ItemComponent,
-    NgstyleComponent
+    NgstyleComponent,
+    DirectiveDirective,
+    NoImagePipe
   ],
   imports: [
     BrowserModule,

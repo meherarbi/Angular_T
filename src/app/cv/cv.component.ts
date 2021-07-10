@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Personne } from '../models/personne';
+import { FirstService } from '../services/first.service';
 
 @Component({
   selector: 'app-cv',
@@ -8,13 +9,14 @@ import { Personne } from '../models/personne';
 })
 export class CvComponent implements OnInit {
   listPersonne : Personne[]=[
-    new Personne("1","nidhal","jlassi","gerant",35,"nidhal.jpg"),
-    new Personne("2","meher","arbi","gerant",30,"bart.jpeg"),
-    new Personne("3","meher","arbi","gerant",30,"homer.jpg")
+    new Personne("1","Meher","Arbi","gerant",30,"meher.jpg"),
+    new Personne("2","Bart","Simpson","fils",15,"bart.jpeg"),
+    new Personne("3","Homer","Simpson","Pere",35,"homer.jpg"),
+    new Personne("4","Fehem","fahmoun","Pere",100)
   ]
  selectedPerson!: Personne;
 
-  constructor() { }
+  constructor(private service: FirstService) { }
 
   ngOnInit(): void {
   }
@@ -22,5 +24,6 @@ export class CvComponent implements OnInit {
     this.selectedPerson = p 
 
   }
+ 
 
 }
