@@ -11,6 +11,7 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 import { FormsModule } from '@angular/forms';
 import { DirectiveDirective } from './directive.directive';
 import { NoImagePipe } from './no-image.pipe';
+import { RecruterComponent } from './recruter/recruter.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { NoImagePipe } from './no-image.pipe';
     ItemComponent,
     NgstyleComponent,
     DirectiveDirective,
-    NoImagePipe
+    NoImagePipe,
+    RecruterComponent
   ],
   imports: [
     BrowserModule,

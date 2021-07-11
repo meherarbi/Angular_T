@@ -1,0 +1,13 @@
+
+<div *ngIf="tabrecru.length!=0">
+
+
+<ol>
+  <h3>Liste des recrues</h3>
+    <li *ngFor="let item of tabrecru" class="list-group-item">
+        <img src="../../assets/{{item.avatar | noImage }}" > {{item.nom}} {{item.prenom}}
+    </li>
+
+</ol>
+
+</div>
