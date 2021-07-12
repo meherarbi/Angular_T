@@ -12,6 +12,9 @@ import { FormsModule } from '@angular/forms';
 import { DirectiveDirective } from './directive.directive';
 import { NoImagePipe } from './no-image.pipe';
 import { RecruterComponent } from './recruter/recruter.component';
+import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { RecruterComponent } from './recruter/recruter.component';
     NgstyleComponent,
     DirectiveDirective,
     NoImagePipe,
-    RecruterComponent
+    RecruterComponent,
+    HomeComponent,
+    NavbarComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

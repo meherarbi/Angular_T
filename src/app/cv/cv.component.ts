@@ -21,9 +21,9 @@ export class CvComponent implements OnInit {
   ngOnInit(): void {
   }
   recupcv(p: Personne){
-    this.selectedPerson = p 
+    this.selectedPerson = p
 
   }
- 
+
 
 }
