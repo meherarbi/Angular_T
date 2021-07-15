@@ -11,12 +11,13 @@ export class ListComponent implements OnInit {
   tabpersonne!: Personne[];
   @Output() sendcv = new EventEmitter<Personne>()
   constructor() {}
-  
+
 
   ngOnInit(): void {
   }
 
-  listcv(p: Personne | undefined){
+  listcv(p: Personne){
+
     this.sendcv.emit(p);
 
   }

@@ -8,9 +8,11 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
 
 const routes: Routes = [
  {path:'',component:HomeComponent},
+
  {path:'cv',component:CvComponent},
  {path:'word',component:NgstyleComponent},
- {path:'cv/:id',component:InfoComponent}
+ {path:'cv/:id',component:InfoComponent},
+ {path:'serveur',loadChildren: '../app/sub/sub.module.ts#SubModule'},
 
 ];
 

@@ -15,6 +15,7 @@ import { RecruterComponent } from './recruter/recruter.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InfoComponent } from './info/info.component';
+import { SubModule } from './sub/sub.module';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { InfoComponent } from './info/info.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    SubModule
   ],
   providers: [],
   bootstrap: [AppComponent]
