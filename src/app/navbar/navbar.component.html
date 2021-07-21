@@ -13,10 +13,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/cv']" routerLinkActive="active">CV</a>
+          <a class="nav-link" [routerLink]="['cv']" routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">CV</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/word']" routerLinkActive="active" >MS-WORD</a>
+          <a class="nav-link" [routerLink]="['cv/add']" routerLinkActive="active">ADD CV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['word']" routerLinkActive="active" >MS-WORD</a>
         </li>
 
 

@@ -3,14 +3,14 @@
     <div class="col md 5">
       <div class="list-group">
         <a  class="list-group-item"
-        *ngFor="let item of listserveur"
+        *ngFor="let item of listserveur" [routerLink]="['/serveur',item.id]"
         {{item.nom}} ></a>
 
       </div>
     </div>
     <div class="col md7">
       <router-outlet></router-outlet>
-    
+
     </div>
   </div>
 </div>

@@ -13,7 +13,26 @@ export class ListPersonnesService {
     new Personne("4","Fehem","fahmoun","Pere",100,"avatar.jpg")
   ]
   constructor() { }
+  getlistpersonne(){
+    return this.listPersonne
+  }
+
+  addPersonne(p: Personne){
+    p.id=this.listPersonne[this.listPersonne.length-1].id+1
+    this.listPersonne.push(p)
+  }
+
   findpersonbyid(id:any){
     return this.listPersonne.find((p)=>p.id === id)
+  }
+
+  DeletePersonne(id: Personne){
+    let i = this.listPersonne.indexOf(id)
+    this.listPersonne.splice(i,1)
+  }
+
+  UpdatePersonne(p: Personne){
+    let i = this.listPersonne.indexOf(p)
+    this.listPersonne[i]=p
   }
 }

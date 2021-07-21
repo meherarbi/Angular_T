@@ -1,3 +1,4 @@
+import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { DetailServersComponent } from "./detail-servers/detail-servers.component";
 import { EditServersComponent } from "./edit-servers/edit-servers.component";
@@ -12,5 +13,11 @@ const myroutes : Routes = [
   }
 ]
 
+@NgModule({
+  imports: [RouterModule.forChild(myroutes)],
+  exports:[RouterModule]
+})
 
-export const SUB_ROUTING = RouterModule.forChild(myroutes)
+
+export class SUB_ROUTING {
+}

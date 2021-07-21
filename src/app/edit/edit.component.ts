@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Personne } from '../models/personne';
 import { ListPersonnesService } from '../services/list-personnes.service';
 
+
 @Component({
-  selector: 'app-info',
-  templateUrl: './info.component.html',
-  styleUrls: ['./info.component.css']
+  selector: 'app-edit',
+  templateUrl: './edit.component.html',
+  styleUrls: ['./edit.component.css']
 })
-export class InfoComponent implements OnInit {
+export class EditComponent implements OnInit {
 
   listperson: Personne | any;
 
-
-  constructor(private activatedrouter: ActivatedRoute ,
-    private persServ:ListPersonnesService ,
-    private router: Router) { }
+  constructor(private activatedrouter:ActivatedRoute,private persServ:ListPersonnesService, private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.activatedrouter.paramMap.subscribe(
@@ -28,12 +27,10 @@ export class InfoComponent implements OnInit {
     }
   }
 
-  deletePerson(){
-    if(confirm('Are you sure you want to delete'))
-    this.persServ.DeletePersonne(this.listperson)
+  updatePerson(){
+    this.persServ.UpdatePersonne(this.listperson)
     this.router.navigateByUrl('cv')
+
   }
 
 }
-
-

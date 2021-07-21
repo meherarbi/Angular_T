@@ -1,5 +1,7 @@
+import { ListPersonnesService } from './../services/list-personnes.service';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Personne } from '../models/personne';
+
 
 @Component({
   selector: 'app-list',
@@ -10,10 +12,11 @@ export class ListComponent implements OnInit {
   @Input()
   tabpersonne!: Personne[];
   @Output() sendcv = new EventEmitter<Personne>()
-  constructor() {}
+  constructor(private persServ:ListPersonnesService) {}
 
 
   ngOnInit(): void {
+    this.tabpersonne=this.persServ.getlistpersonne()
   }
 
   listcv(p: Personne){
@@ -21,5 +24,6 @@ export class ListComponent implements OnInit {
     this.sendcv.emit(p);
 
   }
+ 
 
 }

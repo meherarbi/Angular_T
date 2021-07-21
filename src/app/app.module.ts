@@ -16,6 +16,9 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { InfoComponent } from './info/info.component';
 import { SubModule } from './sub/sub.module';
+import { LoginComponent } from './login/login.component';
+import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -30,12 +33,15 @@ import { SubModule } from './sub/sub.module';
     RecruterComponent,
     HomeComponent,
     NavbarComponent,
-    InfoComponent
+    InfoComponent,
+    LoginComponent,
+    AddComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     FormsModule,
+    AppRoutingModule,
     SubModule
   ],
   providers: [],

@@ -43,6 +43,7 @@
                           <button [routerLink]="['/cv', 'edit', listperson.id]" class="btn btn-primary">
                               Update
                           </button>
+                          <button (click)="deletePerson()" class="btn btn-danger" value="Delete">Delete</button>
                       </div>
                   </div>
               </div>

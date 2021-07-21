@@ -14,5 +14,6 @@ export class ListServersComponent implements OnInit {
 
   ngOnInit(): void {
      this.listserveur = this.servServeur.getlistserveurs()
+     
 }
 }
